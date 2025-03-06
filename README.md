@@ -1,11 +1,21 @@
-Lời đầu tiên thì nhóm chúng em xin được cảm ơn các thầy vì đã dành thời gian xem code của chúng em ạ !!!
-Sau đây sẽ là hướng dẫn chi tiết cách thức chạy chương trình của chúng em ạ
+# Hệ thống Nhận Diện Xâm Nhập
 
-Step 1: Run main.py, type 1,2 or 3 to select a service
-Step 2: After choose a service, the program will request you to paste the path of the video(all the video is in the "input" folder)
-Step 3: After choosing a video, you will freely to choose the variant of the model. The larger model will have better detect and tracking quality but reduce of performance.
+## Giới thiệu
+Hệ thống này sử dụng mô hình YOLOv8 để phát hiện đối tượng và ByteTrack để theo dõi đối tượng theo thời gian thực. Ứng dụng có thể được sử dụng trong giám sát an ninh để nhận diện và cảnh báo các hành vi xâm nhập trái phép. Thông tin chi tiết về hệ thống nằm trong file Document.pdf.
 
-*****Some note ****
-1. If you choose Prohibited Zone Service and run, after the video stream on the screen, please click 4 point on the screen to create a Prohibited Zone
-2. If you choose Crowd Detection Service and run, after the video stream on the screen,  please click 2 point on the screen to create line to count customer
+## Thành phần chính
+1. **YOLOv8**: Mô hình deep learning hiện đại để phát hiện đối tượng với độ chính xác cao và tốc độ nhanh.
+2. **ByteTrack**: Thuật toán theo dõi đối tượng sử dụng thông tin từ YOLOv8 để theo dõi chuyển động một cách chính xác.
+3. **OpenCV**: Hỗ trợ xử lý hình ảnh và hiển thị kết quả.
+4. **Ultralytics YOLO**: Thư viện cung cấp các mô hình YOLOv8 được huấn luyện sẵn và công cụ hỗ trợ inference.
+
+## Cài đặt
+### Yêu cầu hệ thống
+- Python >= 3.8
+- GPU (tùy chọn, để tăng tốc xử lý)
+
+## Ứng dụng
+- Giám sát an ninh trong khu vực nhạy cảm
+- Phát hiện hành vi xâm nhập trong nhà máy, công trình, khu vực cấm
+
 
